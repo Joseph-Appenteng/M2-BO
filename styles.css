@@ -19,6 +19,14 @@ section{
   background-position: center;
 }
 
+.logo{
+  display: flex; /* Display the logo and nav in a row */
+  justify-content: space-between; /* Position the logo on the left and nav on the right */
+  align-items: center; /* Center the logo and nav vertically */
+  padding: 10px; /* Add some padding to the container */
+  position:fixed
+}
+
 header{
   position: relative;
   top: 0;
@@ -113,5 +121,16 @@ header .navigation a:hover{
 .media-icons a:hover{
   transform: scale(1.5);
 }
+
+.gallery {
+  display: flex; /* Display the images in a row */
+  flex-wrap: wrap; /* Wrap the images onto multiple rows if necessary */
+}
+
+.gallery img {
+  width: 30%; /* Set the width of each image */
+  margin: 10px; /* Add some space between images */
+}
+
 
       
