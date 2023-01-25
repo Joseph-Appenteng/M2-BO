@@ -8,12 +8,12 @@ export class GameRenderer
         this.canvas = document.getElementById("canvas");
         this.g = canvas.getContext("2d");
         this.images = [];
-        this.playeridle = new Rect(1,21,24,24);
+        this.playeridle = new Rect(0,20,700,40);
         this.elec = new Rect(1,21,24,24);
     }
     loadImages()
     {
-        let sources = ["download.jpeg","download.jpeg"];
+        let sources = ["28-288482_mole-clipart-whack-a-mole-from-whack-a-mole.png","28-288482_mole-clipart-whack-a-mole-from-whack-a-mole.png"];
 
         let scope = this;
 
