@@ -9,6 +9,7 @@ export class GameRenderer
         this.g = canvas.getContext("2d");
         this.images = [];
         this.playeridle = new Rect(1,21,24,24);
+        this.elec = new Rect(1,21,24,24);
     }
     loadImages()
     {
@@ -33,6 +34,12 @@ export class GameRenderer
             this.images.push(img);
         }
     }
+    renderSprite(img,clip,pos)
+    {
+        this.g.drawImage(img,
+            clip.x, clip.y, clip.w, clip.h,
+            pos.x, pos.y, pos.w, pos.h)
+    }
 
     render()
     {
@@ -41,11 +48,8 @@ export class GameRenderer
         g.fillStyle = "#2e6ede";
         g.fillRect(0, 0, this.canvas.clientWidth, this.canvas.clientHeight);
 
-        g.fillStyle = "#leca07";
-        let player = this.game.player;
-        let clip = this.playeridle;
-
-        g.drawImage(this.image[1], clip.x, clip.y, clip.w, clip.h )
+        this.renderSprite(this.images[1], this.playeridle, this.game.player);
+             
         
     }
 
