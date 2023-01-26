@@ -27,19 +27,19 @@
         </a>
       </h2>
       <div class="navigation">
-        <a href="#">Game</a>
+        <a href="#game">Game</a>
         <a href="#info">Info</a>
-        <a href="#">Fotogalerij</a>
-        <a href="#">Reviews</a>
-        <a href="#">Contact</a>
+        <a href="#foto">Fotogalerij</a>
+        <a href="#review">Reviews</a>
+        <a href="#contact">Contact</a>
         <a href="Geschiedenes.html">NL</a>
         <a href="index2_Eng.html">ENG</a>
       </div>
     </header>
     <div class="content">
-      <div class="info">
+      <div id="info">
         <a href="info"></a>
-        <h2>Wat er te zien. <br /><span></span></h2>
+        <header><h2>Wat er te zien <br /><span></span></h2></header>
         <p>
           Het Nationaal Videogame Museum is 'the place to be' voor iedereen die
           meer wil weten (én beleven) over de geschiedenis, maatschappelijke en
@@ -65,17 +65,55 @@
           eigen ontmoetingsplek om hun hobby uit te oefenen en lekker te
           ontspannen met een game.
         </p>
-        <a href="HomePage.html" class="info-btn">Go back</a>
+        <a href="HomePage.html" class="info-btn">Terug</a>
       </div>
     </div>
     <header>
-      <h3>Fotogalerij.</h3>
+      <h3>Fotogalerij</h3>
     </header>
-    <section></section>
+    <div id="foto"></div>
+    <section>
+    <div class="popup">
+      <div class="top-bar">
+          <p class="image-name">img1.png</p>
+          <span class="close-btn"></span>
+      </div>
+      <button class="arrow-btn left-arrow"><img src="img/arrow.png" alt=""></button>
+      <button class="arrow-btn right-arrow"><img src="img/arrow.png" alt=""></button>
+      <img src="img/img1.jpg" class="large-image" alt="">
+      <h1 class="index">01</h1>
+  </div>
+
+  <div class="gallery">
+      <div class="gallery-image">
+          <img src="img/img1.jpg" alt="" class="image">
+      </div>
+      <div class="gallery-image">
+          <img src="img/img2.jpg" alt="" class="image">
+      </div>
+      <div class="gallery-image">
+          <img src="img/img3.jpg" alt="" class="image">
+      </div>
+      <div class="gallery-image">
+          <img src="img/img4.jpg" alt="" class="image">
+      </div>
+      <div class="gallery-image">
+          <img src="img/img5.jpg" alt="" class="image">
+      </div>
+      <div class="gallery-image">
+          <img src="img/img6.jpg" alt="" class="image">
+      </div>
+  </div>
+</section>
+
+  <script src="app.js"></script>
+  <div id="game"></div>
     <header>
-      <h4>Game.</h4>
+      <h4>Game</h4>
     </header>
-    <header><h5>Reviews.</h5></header>
+    <a href="game/game.js" class="info-btn">Play now!</a>
+    <div id="review"></div>
+    <header><h5>Reviews</h5></header>
     <div class="testimonials">
       <div class="inner">
         <div class="border"></div>
@@ -154,19 +192,43 @@
         </div>
       </div>
     </div>
-
+    <div id="contact"></div>
     <footer>
-      <div class="media-icons">
-        <a href="https://www.facebook.com/NationaalGameMuseum/"
-          ><i class="fab fa-facebook-f"></i
-        ></a>
-        <a href="https://twitter.com/NaVGMuseum"
-          ><i class="fab fa-twitter"></i
-        ></a>
-        <a href="https://www.instagram.com/NVGMuseum/"
-          ><i class="fab fa-instagram"></i
-        ></a>
-      </div>
-    </footer>
-  </body>
+      <div class="main-content">
+        <div class="left box">
+          <h2>Openingstijden</h2>
+          <div class="content">
+            <p>Maandag: Gesloten</p>
+            <p>Dinsdag: Gesloten</p>
+            <p>Woensdag: 10.00 - 18.00 uur</p>
+            <p>Donderdag: 10.00 - 18.00 uur</p>
+            <p>Vrijdag: 10.00 - 21.00 uur</p>
+            <p>Zaterdag: 10.00 - 18.00 uur</p>
+            <p>Zondag: 12.00 - 18.00 uur</p>
+            <div class="social">
+              <a href="https://www.facebook.com/NationaalGameMuseum/"><span class="fab fa-facebook-f"></span></a>
+              <a href="https://twitter.com/NaVGMuseum"><span class="fab fa-twitter"></span></a>
+              <a href="https://www.instagram.com/NVGMuseum/"><span class="fab fa-instagram"></span></a>
+              <a href="https://www.youtube.com/channel/UCnNuMO-7-TVI5ZEZwzU14Ew/featured?view_as=subscriber"><span class="fab fa-youtube"></span></a>
+            </div>
+          </div>
+        </div>
+        <div class="center box">
+          <h2>Address</h2>
+          <div class="content">
+            <div class="place">
+              <span class="fas fa-map-marker-alt"></span>
+              <span class="text">Nationaal Videogame Museum, Theaterplein 11, 2711 EK Zoetermeer</span>
+            </div>
+            <div class="phone">
+              <span class="fas fa-phone-alt"></span>
+              <span class="text">+31600000000</span>
+            </div>
+            <div class="email">
+              <span class="fas fa-envelope"></span>
+              <span class="text">NationaalGameMuseum@email.com</span>
+            </div>
+          </div>
+        </div>
+</body>
 </html>
