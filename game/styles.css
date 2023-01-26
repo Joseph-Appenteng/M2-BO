@@ -1,0 +1,17 @@
+.titel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.wack{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: underline;
+}
+
+*{
+    background-image: url(/img/Zz03ZTY0Mzk3MDhlNDgxMWViYmRmNWY3MjZjM2QxZTdiZg==.jpg);
+}
