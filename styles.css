@@ -53,11 +53,11 @@ header .navigation a {
   text-decoration: none;
   font-weight: 500;
   font-size: 20px;
-  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   letter-spacing: 1px;
   padding: 2px 15px;
   transition: 2s;
-  transition-property:all;
+  transition-property: all;
 }
 header .navigation a:hover {
   border-radius: 10px;
@@ -99,6 +99,15 @@ header > h3 {
   line-height: 60px;
   margin-bottom: 30px;
 }
+header>h6{
+  color: #6f8295;
+  font-size: 55px;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 2px;
+  line-height: 60px;
+  margin-bottom: 30px;
+}
 
 header > h3 > span {
   color: #fff;
@@ -106,7 +115,7 @@ header > h3 > span {
   font-weight: 600;
 }
 
-header > h2> h4 > h5 {
+header > h2 > h4 > h5 {
   color: #6f8295;
   font-size: 55px;
   text-transform: uppercase;
@@ -158,8 +167,7 @@ header > h4 {
   font-size: 16px;
   font-weight: 500;
   margin-bottom: 60px;
-  left:10px
-
+  left: 10px;
 }
 
 .content .info-btn {
@@ -523,44 +531,36 @@ footer {
   margin: 15px 0;
 }
 
-.titel{
+.titel {
   display: flex;
   justify-content: center;
   align-items: center;
   padding-top: 40px;
-  
 }
 
-.wack{
+.wack {
   display: flex;
   justify-content: center;
   align-items: center;
   text-decoration: underline;
 }
 
-
-
-.back{
+.back {
   color: rgb(0, 0, 0);
-background: #ec9006;
+  background: #ec9006;
 
+  font-weight: 500;
+  letter-spacing: 2px;
 
-font-weight: 500;
-letter-spacing: 2px;
-
-border-radius: 10px;
-padding: 2px;
-padding-bottom: 20px;
-padding-top: 20px;
-text-decoration: none;
-text-decoration-line: none;
-
-
-
+  border-radius: 10px;
+  padding: 2px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  text-decoration: none;
+  text-decoration-line: none;
 }
 
 .back:hover {
   background: #a8e0ed;
   transform: scale(1, 1);
-  
 }
