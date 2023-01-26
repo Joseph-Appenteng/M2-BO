@@ -76,7 +76,7 @@
       let randoFill = ''
   
       let i, j, currX, currY, currWidth, currHeight, currShape, fillColour
-      currXStart = 580
+      currXStart = 300
       currY = 100
   
       

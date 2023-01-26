@@ -46,10 +46,6 @@
           culturele kant van videogames. Het museum laat haar bezoekers ook de
           games van morgen ervaren. Gamers van jong tot oud zijn welkom om te
           spelen, ontdekken, leren en ervaringen online te delen.
-        </p>
-        <h3>Onze Geschiedenis</h3>
-        <br /><span></span>
-        <p>
           Een garagebox in Den Haag is de plek waar het avontuur in 2008 begon,
           met twee vrienden Hasan Tasdemir en Pascal Rappailles. De garagebox
           werd al snel te klein waarna ze uitweken naar een loods op een
@@ -65,6 +61,7 @@
           eigen ontmoetingsplek om hun hobby uit te oefenen en lekker te
           ontspannen met een game.
         </p>
+        <a href="Geschiedenes.html" class="info-btn">Meer info</a>
       </div>
     </div>
     <header>
@@ -105,12 +102,29 @@
   </div>
 </section>
 
-  <script src="app.js"></script>
+<body>
   <div id="game"></div>
     <header>
       <h4>Game</h4>
     </header>
-    <a href="game/index.html" class="info-btn">Play now!</a>
+  
+  <p id="demo"></p>
+  <p id='gameText' class="wack">Wack it!</p>
+
+  
+    <canvas id="gameCanvas" width="800" height="650"></canvas>
+  </div>
+
+  <script src="game/game.js"></script>
+
+
+
+  <p id="demo"></p>
+</body>
+
+  <script src="app.js"></script>
+  
+    
     <div id="review"></div>
     <header><h5>Reviews</h5></header>
     <div class="testimonials">
@@ -193,6 +207,7 @@
         </div>
       </div>
     </div>
+    
     <div id="contact"></div>
     <footer>
       <div class="main-content">
