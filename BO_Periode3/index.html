@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electro</title>
+    <script src="js\main.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style\style.css">
+    <link rel="stylesheet" href="style\weer.css">
+    <link rel="stylesheet" href="style\jjoe.css">
+</head>
+<body>
+    <header class="header">
+        <img class="logo" src="img\logo.png" alt="logo">
+        <nav>
+            <ul>
+                <li><a id="home--js" class="actiev homeNav" href=#></a></li>
+                <li><a id="weer--js" class="weerNav" href=#></a></li>
+                <li><a id="licht--js" class="lichtNav" href=#></a></li>
+                <li><a id="temperatuur--js" class="temperatuurNav" href=#></a></li>
+            </ul>
+        </nav>
+        <section class="date">
+            <div class="DPDC" cityid="2750" lang="nl" id="dayspedia_widget_5a1b3c9415f7a558" host="https://dayspedia.com" ampm="false" nightsign="false" sun="false" style="width: auto;">
+                <a class="DPl"></a>
+                <div class="DPDCh" style="font-size: 0px;"></div>
+                <div class="DPDCt" style="font-size: 1.5rem;">
+                    <span class="DPDCth">09</span>:<span class="DPDCtm">24</span><span class="DPDCts" style="display: none;">25</span><span class="DPDCt12" style="display: none;"></span>
+                </div>
+                <div class="DPDCd" style="font-size: 1rem;">
+                    <span class="DPDCdt">Fri, March 17</span><span class="DPDCtn" style="width: 10px; height: 10px; display: none;"><i></i></span>
+                </div>
+                </div>
+        </section>
+        
+    </header>
+    <butten class="home"></butten>
+    <section id="main--js" class="mainScreen">
+        <article class="tegels lang">
+            <h1>Lichtsterkte</h1>
+            <img class="woonkamer"src="img/woonkamer.png" alt="">
+            <span id="value"></span>
+            <input type="range" min="0" max="100" value="0" id="myRange" class="slider">
+            
+            <img class="woonkamer"src="img/keuken.png" alt="">
+            <span id="value1"></span></p>
+            <input type="range" min="0" max="100" value="0" id="myRange1" class="slider1">
+           
+            <img class="woonkamer"src="img/slaapkamer.png" alt="">
+            <span id="value2"></span></p>
+            <input type="range" min="0" max="100" value="0" id="myRange2" class="slider2">
+            
+            <img class="woonkamer"src="img/badkamer.png" alt="">
+            <span id="value3"></span></p>
+            <input type="range" min="0" max="100" value="0" id="myRange3" class="slider3">
+        </article>
+        <section class="tweeRij">
+        <section class="tegels tweede" >
+            <canvas id="js--chart--1"></canvas>
+        </section>
+        <section class="tegels drie"></section>
+        </section>
+        <section class="vierdeRij">
+            <section class="derdeRij">
+                <section class="tegels vier">
+                    <section class="opkomst">
+                        <img class="zon" src="img\Naamloos-1.png" alt="">
+                        <p>05:00</p>
+                    </section>
+                    <section class="ondergang">
+                        <img class="zon" src="img\Naamloos-2.png" alt="">
+                        <p>19:30</p>
+                    </section>
+                </section>
+                <section class="tegels vijf">
+                    <section class="opkomst">
+                    <img class="zon" src="img\Naamloos-3.png" alt="">
+                    <p>15*</p>
+                </section>
+                <section class="ondergang">
+                    <img class="huis" src="img\Naamloos-4.png" alt="">
+                    <p>20*</p>
+                </section>
+                </section>
+            </section>
+            <section class="tegels zes"></section>
+    </section>
+    </section>
+    <section id="weerScreen--js" class="weerScreen">
+    </section>
+    <section id="temperatuurScreen--js" class="temperatuurScreen">
+    </section>
+</body>
+</html>

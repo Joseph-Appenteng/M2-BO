@@ -1,0 +1,874 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: 0.2s linear;
+  font-family: "Noto Sans", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --game--background--color: rgb(255, 255, 255);
+  --color-red: rgb(223, 0, 0);
+  --color-grey: rgb(247, 247, 247);
+}
+
+main {
+  width: 100%;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-name: fadeIn;
+  animation-duration: 1s;
+}
+
+button:hover {
+  cursor: pointer !important;
+}
+
+body {
+  font-size: 2rem;
+  font-family: "Noto Sans", sans-serif;
+  z-index: 1;
+}
+
+.searchBar {
+  position: relative;
+}
+
+.searchBar__input {
+  border: none;
+  width: 60rem;
+  font-size: 2rem;
+  border-radius: 0.5rem;
+  background: white;
+  display: block;
+  padding: 1rem;
+  padding-left: 5rem;
+}
+
+.searchBar__glass {
+  width: 6rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 1.3rem;
+}
+
+/*nav bar*/
+
+.header {
+  display: flex;
+  height: 8rem;
+  width: 100%;
+  background: var(--color-red);
+  gap: 4rem;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  width: 100%;
+}
+
+.menu-icon {
+  display: flex;
+  color: var(--game--background--color);
+  padding: 10px 15px;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.user-login-icon {
+  color: black;
+  border: 2px solid black;
+  background-color: var(--game--background--color);
+  border-radius: 50%;
+  padding: 15px;
+  cursor: pointer;
+}
+
+.user-login-icon:hover {
+  background-color: lightgray;
+}
+
+.logo img {
+  width: 30rem;
+  margin-left: 8rem;
+  transition-property: transform;
+}
+
+.logo img:hover {
+  transform: scale(1.1);
+}
+
+.header .navbar a {
+  text-decoration: none;
+  font-size: 2rem;
+  margin: 0.2rem;
+  color: var(--game--background--color);
+  margin-right: 10rem;
+}
+
+/*sidemenu popup*/
+
+.container {
+  height: 100%;
+  width: 64rem;
+  position: absolute;
+  z-index: 999;
+  background: white;
+  transition: 0.5s ease;
+  transform: translateX(-66.5rem);
+}
+
+.container .head img {
+  width: 30rem;
+  height: 13rem;
+  padding: 3rem;
+}
+
+.container ul {
+  width: 100%;
+  list-style: none;
+}
+
+.container ul li {
+  display: block;
+  width: 100%;
+}
+
+.container ul p {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-left: 8rem;
+  cursor: default;
+}
+
+.container ul li a {
+  color: var(--color-grey);
+  padding: 1.2rem 1rem;
+  text-decoration: none;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  position: relative;
+  transition: 0.3s;
+  overflow: hidden;
+}
+
+.container ul li a i {
+  width: 6rem;
+  text-align: center;
+  padding-left: 3rem;
+  color: black;
+}
+
+.container ul li:hover {
+  background: var(--color-grey);
+  color: black;
+  letter-spacing: 0.5rem;
+  cursor: pointer;
+}
+
+input {
+  display: none;
+}
+
+.container span {
+  position: absolute;
+  right: -46rem;
+  top: 3rem;
+  font-style: 3rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  color: var(--game--background--color);
+  padding: 3px 10px;
+  border: 2px 2px 2px solid var(--game--background--color);
+  animation-name: fadeIn;
+  animation-duration: 0.8s;
+}
+
+#bars {
+  background: rgb(223, 0, 0);
+}
+
+#check:checked ~ .container span {
+  position: absolute;
+  right: 1rem;
+  color: black;
+}
+
+#check:checked ~ .container {
+  transform: translateX(0);
+}
+
+#check:checked ~ .container #bars {
+  display: none;
+}
+
+/*hero section*/
+
+.home {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  background: var(--color-grey);
+  margin: 0 auto;
+  padding: 0rem 0rem rem 8rem;
+  width: 100%;
+  box-shadow: 0 1rem 1rem 0 rgba(0, 0, 0, 0.2),
+    inset 0 -1rem 1rem -1rem rgba(0, 0, 0, 0.1);
+}
+
+.image:hover {
+  animation-name: fadeIn;
+  animation-duration: 0.8s;
+}
+
+.home .home-bg {
+  flex: 1 1 42rem;
+}
+
+.home .home-bg h1 {
+  font-size: 3rem;
+  font-weight: 1000;
+  margin-left: 8rem;
+}
+
+.home .home-bg p {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  opacity: 0.8;
+  margin-left: 8rem;
+}
+
+.btn {
+  background-color: var(--color-red);
+  font-size: 2rem;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  text-decoration: none;
+  margin-left: 8rem;
+}
+
+/*Game promote section*/
+
+.section--first {
+  margin-top: 2rem;
+}
+
+.hero_section {
+  height: 100%;
+  position: relative;
+  background: var(--color-grey);
+  padding: 0 3rem 2rem 8rem;
+}
+
+.deal {
+  width: 100%;
+  height: 40rem;
+}
+
+.hero_section p {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 700;
+}
+
+.hero_section h1 span,
+p span {
+  color: rgb(223, 0, 0);
+}
+
+.hero_section button {
+  background: transparent;
+  border: 2px solid black;
+  outline: none;
+  padding: 1rem 2rem;
+  margin-top: 3rem;
+  color: black;
+  cursor: pointer;
+}
+
+.hero_section button:hover {
+  color: rgb(223, 0, 0);
+}
+
+.traingle {
+  display: inline-block;
+  color: black;
+}
+
+.traingle i {
+  font-size: 16px;
+}
+
+.launch-time {
+  display: flex;
+  margin-top: 2rem;
+}
+
+.launch-time div {
+  flex-basis: 10rem;
+}
+
+.launch-time div p {
+  font-size: 4rem;
+  margin-bottom: 0.8rem;
+}
+
+.discount {
+  background-color: rgb(223, 0, 0);
+  color: #ffffff;
+  border-radius: 50%;
+  padding: 1.5rem;
+  position: relative;
+  left: -40rem;
+  top: -50rem;
+}
+
+.amount {
+  font-weight: bold;
+  font-size: 5rem;
+  position: relative;
+  left: -40rem;
+  top: -50rem;
+}
+
+.hero_section .fab {
+  position: relative;
+  left: 50rem;
+  top: -10rem;
+  font-size: 5rem;
+  padding: 2rem;
+}
+
+.hero_section .fab:hover {
+  transform: scale(1.2);
+}
+
+/*top trending*/
+.section--second {
+  width: 60%;
+  height: 100%;
+  margin-bottom: 15rem;
+}
+
+.section--second h1 {
+  margin-left: 8rem;
+}
+
+.games {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 60rem;
+  gap: 15rem;
+}
+
+.games__game {
+  list-style: none;
+  background: var(--game--background--color);
+  border-radius: 0.5rem;
+  transition: 0.8s opacity;
+  border-bottom: 0.5rem solid black;
+  margin-left: 8rem;
+  animation-name: fadeIn;
+  animation-duration: 0.8s;
+}
+
+.games__figure {
+  width: 100%;
+  height: 60%;
+}
+
+.games__img {
+  width: 170%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.5s;
+}
+
+.games__img:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.games__body {
+  padding: 2rem;
+  height: 40%;
+  padding-top: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: flex-end;
+}
+
+.games__h2 {
+  font-size: 300%;
+  font-weight: 700;
+}
+
+.games__h3 {
+  font-size: 120%;
+  font-weight: 400;
+}
+
+.games__stars {
+  color: var(--color-red);
+  font-size: 130%;
+}
+
+.games__button {
+  width: 20rem;
+  border: none;
+  font-size: 90%;
+  font-family: "Lato", sans-serif;
+  color: white;
+  background: black;
+  padding: 1rem 2rem;
+}
+
+.arrow-game {
+  width: 2%;
+  background: white;
+  font-size: 300%;
+  outline: none;
+  border: none;
+  position: relative;
+  top: 35rem;
+}
+
+.arrow-game-right {
+  width: 2%;
+  background: white;
+  font-size: 300%;
+  outline: none;
+  border: none;
+  position: relative;
+  top: 35rem;
+  left: 142rem;
+}
+
+li[data-title="STARWARSDarthVaderCharm"]:nth-child(4),
+li[data-title="STARWARSDarthVaderCharm"]:nth-child(5),
+li[data-title="STARWARSDarthVaderCharm"]:nth-child(6) {
+  display: none;
+}
+
+/*review*/
+.reviews-h1{
+  margin-top: 8rem;
+  margin-left: 8rem;
+}
+
+.section--third {
+  background: white;
+  display: flex;
+  height: auto;
+  padding: 4rem;
+  align-items: center;
+}
+
+.section--third h1{
+  position: relative;
+  top: -30rem;
+}
+
+.arrow {
+  width: 10%;
+  background: white;
+  font-size: 300%;
+  outline: none;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reviews {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  gap: 2rem;
+  width: 80%;
+  flex-wrap: wrap;
+}
+
+.arrow:hover {
+  cursor: pointer;
+}
+
+.review {
+  width: 30rem;
+  min-height: 30rem;
+  margin-top: 3rem;
+  background: rgb(223, 0, 0);
+  list-style: none;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.5rem;
+  background: white;
+  box-shadow: 0 1rem 1rem 0 rgba(0, 0, 0, 0.2),
+    inset 0 -1rem 1rem -1rem rgba(0, 0, 0, 0.1);
+  position: relative;
+  animation-name: fadeIn;
+  animation-duration: 0.8s;
+}
+
+.review:nth-of-type(4),
+.review:nth-of-type(5),
+.review:nth-of-type(6) {
+  display: none;
+}
+
+.inner {
+  max-width: 20rem;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 10px;
+  animation-name: fadeIn;
+  animation-duration: 0.8s;
+}
+
+.review img {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  transition: 0.3s;
+  transition-property: transform;
+  cursor: pointer;
+  margin-left: 3rem;
+  animation-name: fadeIn;
+  animation-duration: 0.8s;
+}
+.review img:hover {
+  transform: scale(1.5);
+}
+.name {
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin-left: 4rem;
+}
+
+.stars {
+  color: var(--color-red);
+}
+
+.review p {
+  font-size: 65%;
+  font-style: italic;
+  padding-bottom: 2rem;
+  border-bottom: 0.5rem solid rgba(0, 0, 0, 0.2);
+}
+
+/*footer*/
+
+footer {
+  position: relative;
+  bottom: 0px;
+  width: 100%;
+  background-color: rgb(227, 227, 227);
+}
+
+.main-content {
+  display: flex;
+}
+.main-content .box {
+  flex-basis: 50%;
+  padding: 10px 20px;
+}
+
+.content img {
+  height: 10rem;
+  width: 10rem;
+  margin-left: 2rem;
+  background-color: white;
+  margin: 2rem;
+  display: flex;
+  border-radius: 2rem;
+}
+
+.content a {
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.box h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: black;
+}
+.box .content {
+  margin: 20px 0 0 0;
+  position: relative;
+}
+.box .content:before {
+  position: absolute;
+  content: "";
+  top: -10px;
+  height: 2px;
+  width: 100%;
+  background: black;
+}
+.box .content:after {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 15%;
+  background: rgb(223, 0, 0);
+  top: -10px;
+}
+.left .content p {
+  text-align: justify;
+}
+.left .content .social {
+  margin: 20px 0 0 0;
+}
+.left .content .social a {
+  padding: 0 2px;
+}
+.left .content .social a span {
+  height: 40px;
+  width: 40px;
+  background: white;
+  line-height: 40px;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+.left .content .social a span:hover {
+  background: rgb(223, 0, 0);
+}
+.center .content .fab {
+  font-size: 1.4375rem;
+  background: white;
+  height: 45px;
+  width: 45px;
+  line-height: 45px;
+  text-align: center;
+  border-radius: 50%;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.center .content .fas {
+  font-size: 1.4375rem;
+  background: white;
+  height: 45px;
+  width: 45px;
+  line-height: 45px;
+  text-align: center;
+  border-radius: 50%;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.center .content .fas:hover {
+  background: rgb(223, 0, 0);
+  transform: scale(1.7);
+}
+
+.center .content .fab:hover {
+  background: rgb(223, 0, 0);
+  transform: scale(1.7);
+}
+.center .content .text {
+  font-size: 2rem;
+  font-weight: 500;
+  padding-left: 10px;
+  color: black;
+}
+h2,
+a {
+  color: black;
+}
+
+.content p {
+  color: black;
+}
+
+.center .content .phone {
+  margin: 15px 0;
+}
+
+/*product1*/
+.product-body{
+  background: var(--color-grey);
+}
+
+.small-container{
+  margin-left: 8rem;
+    padding-left: 3rem;
+    padding-right: 4rem;
+    background: var(--color-grey);
+}
+
+.games__star{
+  margin-left: 3rem;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+   
+}
+
+.single-product{
+    margin-top: 0rem;
+}
+
+.col-2 img{
+    max-width: 100%;
+    padding: 5rem 0;
+}
+
+.single-product .col-2{
+    padding: 1rem;
+}
+
+.col-2{
+    flex-basis: 40%;
+    min-width: 60rem;
+}
+
+.col-2 h1{
+  font-size: 5rem;
+  line-height: 5rem;
+  margin: 3rem;
+}
+
+.single-product select{
+  padding: 1rem;
+  margin-top: 2rem;
+  background: var(--color-grey);
+  margin-left: 3rem;
+}
+
+.single-product h4 ,s{
+  margin-left: 3rem;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.bta{
+  text-decoration: none;
+  background:black;
+  color: white;
+  padding: 0.8rem 3rem;
+  margin: 2rem;
+  border-radius: 10%;
+  margin-right: 1rem;
+}
+
+.col-2 p{
+  margin-left: 3rem;
+  margin-top: 1rem;
+}
+
+.col-2 h3{
+  margin-top: 4rem;
+}
+
+.product_h,  .product_p{
+  margin-left: 8rem;
+}
+
+.product_p{
+  margin-top: 2rem;
+  margin-left: 8rem;
+}
+
+.cart-icon{
+  background: var(--color-red);
+  padding: 0.8rem 3rem;
+  border-radius: 10%;
+  margin-left: 0;
+}
+
+ .bta:hover{
+  background: gray;
+  color: black;
+}
+
+.cart-icon:hover{
+  cursor: pointer;
+  background: grey;
+}
+
+.specs{
+  display: flex;
+  font-size: 1.5rem;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 8rem;
+}
+
+.specs h1,h3{
+  font-size: 3rem;
+}
+
+.deluxe , .ultimate{
+  display: none;
+}
+
+.deluxe h1, .ultimate h1{
+  font-size: 2rem;
+  margin: 0;
+  margin-left: 3rem;
+}
+
+@keyframes away {
+  from {
+    transform: scaleX(1);
+  }
+  to {
+    transform: scaleX(0);
+  }
+}
+
+@keyframes popup {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    filter: blur(10px);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0px);
+  }
+}
+
+@media screen and (max-width: 77.9rem) {
+}
+
+@media screen and (max-width: 50rem) {
+  .arrow {
+    display: none;
+  }
+  .reviews {
+    width: 100%;
+  }
+  .arrow-game-right,
+  .arrow-game {
+    display: none;
+  }
+}

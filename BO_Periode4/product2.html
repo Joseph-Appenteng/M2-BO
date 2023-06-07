@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="Js/main.js" defer></script>
+    <script src="Js/kit.fontawesome.com_845fef67b3.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <title>Product 1</title>
+  </head>
+  <body class="product-body">
+    <input type="checkbox" name="" id="check">
+    <div class="container">
+      <label for="check">
+        <span class="fas fa-times" id="times"></span>
+        <span class="fas fa-bars" id="bars"></span>
+      </label>
+      <div class="head"><img src="img/wepik-green-blue-and-yellow-gaming-logo-20230523111243ZQWB.webp" alt=""></div>
+      <ul>
+        <p>PC GAMES</p>
+        <li><a href=""><i class="fab fa-steam"></i></a>Steam</li>
+        <li><a href=""><i class="fas fa-desktop"></i></a>Epic Games</li>
+        <p>PLAYSATION GAMES</p>
+        <li><a href=""><i class="fab fa-playstation"></i></a>Playstation 5</li>
+        <li><a href=""><i class="fab fa-playstation"></i></a>Playstation 4</li>
+        <p>XBOX GAMES</p>
+        <li><a href=""><i class="fab fa-xbox"></i></a>Xbox One</li>
+        <li><a href=""><i class="fab fa-xbox"></i></a>Xbox Series X/S</li>
+      </ul>
+    </div>
+    <main>
+  
+      <header class="header">
+        <a href="Homepagina.html" class="logo"><img src="img/wepik-green-blue-and-yellow-gaming-logo-20230523111243ZQWB.webp" /></a>
+        <nav class="navbar">
+          <p class="menu-icon">Alle categorieen</p>
+          <section class="searchBar">
+            <input type="text" placeholder="Wat zoek je?" class="searchBar__input" />
+            <i class="fa-solid fa-magnifying-glass searchBar__glass"></i>
+          </section>
+          <span class="user-login-icon">
+            <i class="fas fa-user"></i>
+          </span>
+          <span class="user-login-icon">
+            <i class="fas fa-shopping-cart"></i>
+          </span>
+        </nav>
+      </header>
+    <div class="small-container single-product">
+      <div class="row">
+        <div class="col-2">
+            <img id="productImage" src="img/street-fighter-6-pc-spel-steam-cover.webp" alt="" />
+        </div>
+        <div class="col-2">
+          <p>Home /☰ Alle Categorieen /PC</p>
+          <h1>Street Fighter 6</h1>
+          <div class="games__star">★★★<i class="fa-solid fa-star-half-stroke"></i> (4/5)</div>
+          <s>€59</s>
+          <h4>€40.99</h4>
+         
+         
+          <select>
+            <option>Platform Selecteren</option>
+            <option>PC</option>
+            <option>Playstation 5</option>
+            <option>Xbox X/Series S</option>
+          </select>
+          
+          <select id="editionSelect" onchange="changeProductImage()">
+            <option>Standard Edition - €40.99</option>
+            <option>Deluxe Edition - €57.49</option>
+            <option>Ultimate - €71.49</option>
+          </select>
+          
+
+          <button class="bta">Add to Cart</button>
+          <span class="cart-icon">
+            <i class="fas fa-shopping-cart"></i>
+          </span>
+          <div class="deluxe">
+           <h1>Deluxe includes</h1>
+          <p>✓ Street Fighter 6</p>
+          <p>✓ Jaar 1 Personage-pas</p>
+        </div>
+          <div class="ultimate">
+           <h1>Ultimate Editie Includes</h1>
+          <p>✓ Street Fighter 6</p>
+          <p>✓ Jaar 1 Ultimate-pas</p>
+        </div>
+          
+        </div>
+      </div>
+    </div>
+    
+    <h3 class="product_h">About the Game</h3>
+          <p class="product_p">
+            EEN NIEUW WONDERBAARLIJK AVONTUUR STAAT JE TE WACHTEN. Verrijs,
+            Bezoedelden, en laat je leiden door genade om de kracht van de Elden
+            Ring te gebruiken en een Elden Lord in The Lands Between te worden.Een immens grote wereld vol spanning
+            Een immens grote wereld waarin open velden met uiteenlopende taferelen en enorme dungeons met complexe en driedimensionale ontwerpen naadloos met elkaar zijn verbonden. Terwijl je de wereld verkent, ervaar je de pret van het ontdekken van onbekende en overweldigende gevaren, met als gevolg een groot gevoel van voldoening.
+          </p>
+
+          <article class="specs">
+    <h3>Specs</h3>
+          <p >
+          <h1> minimum*</h1>
+           <p> OS: Windows 10 </p>
+          <p>  Processor: INTEL CORE I5-8400 or AMD RYZEN 3 3300X </p>
+          <p>  Memory: 12 GB RAM </p>
+          <p>  Graphics: NVIDIA GEFORCE GTX 1060 3 GB or AMD RADEON RX 580 4 GB </p>
+          <p>  DirectX: Version 12  
+          <p>  Storage: 60 GB available space </p>
+          <p>   Sound Card: Windows Compatible Audio Device </p>
+
+          <h1> minimum*</h1>
+          <p> OS: Windows 10 </p>
+         <p>  Processor: INTEL CORE I5-8400 or AMD RYZEN 3 3300X </p>
+         <p>  Memory: 12 GB RAM </p>
+         <p>  Graphics: NVIDIA GEFORCE GTX 1060 3 GB or AMD RADEON RX 580 4 GB </p>
+         <p>  DirectX: Version 12  
+         <p>  Storage: 60 GB available space </p>
+         <p>   Sound Card: Windows Compatible Audio Device </p>
+        </article>
+
+        <footer>
+            <div class="main-content">
+              <div class="left box">
+                <h2>Services</h2>
+                <div class="content">
+                  <a href="https://www.instant-gaming.com/nl/voorwaarden/">Voorwaarden</a>
+                  <a href="https://www.instant-gaming.com/nl/veelgestelde-vragen/">FAQ</a>
+                  <a href="https://nl.trustpilot.com/review/instant-gaming.com"> <img src="img/7424355_trustpilot_icon.webp"
+                      alt=""> </a>
+                  <div class="social">
+                    <a href="https://www.facebook.com/Instant.Gaming"><span class="fab fa-facebook-f"></span></a>
+                    <a href="https://twitter.com/InstantGamingEN"><span class="fab fa-twitter"></span></a>
+                    <a href="instagram.com/instantgamingen/"><span class="fab fa-instagram"></span></a>
+                    <a href="https://www.youtube.com/channel/UCJ4IjxQrCVSunrWIknciNNg"><span class="fab fa-youtube"></span></a>
+                  </div>
+                </div>
+              </div>
+              <div class="center box">
+                <h2>Contact</h2>
+                <div class="content">
+                  <div class="place">
+                    <span class="text">Betaal met </span>
+                    <span class="fab fa-cc-visa"></span>
+                    <span class="fab fa-ideal"></span>
+                    <span class="fab fa-paypal"></span>
+                  </div>
+                  <div class="phone">
+                    <span class="fas fa-mobile-alt"></span>
+                    <span class="text">+31600000000</span>
+                  </div>
+                  <div class="email">
+                    <span class="fas fa-envelope"></span>
+                    <span class="text">35801@ma-web.nl</span>
+                  </div>
+                </div>
+              </div>
+          </footer>
+  </body>
+</html>
